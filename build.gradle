@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+
+group = 'com.csci5408.assignment-3'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20190722'
+
+
+    //Twitter4j dependencies
+
+    // https://mvnrepository.com/artifact/org.twitter4j/twitter4j-stream
+    implementation group: 'org.twitter4j', name: 'twitter4j-stream', version: '4.0.7'
+    // https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core
+    implementation group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.7'
+
+}
